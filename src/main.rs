@@ -1,5 +1,27 @@
 use std::io;
 
+struct Player {
+    player_number: u8,
+    remaining_dice: u8,
+    last_rolls: Vec<u8>,
+    first_turn_last_die: bool
+}
+
+impl Player {
+    fn lose_die(&mut self) {
+        self.remaining_dice -= 1;
+    }
+
+    fn roll_dice(&mut self) {
+        let mut i = 0;
+        while i <= self.remaining_dice {
+            //rand roll 1-6 for current die
+            //add to last_rolls vector
+            i += 1;
+        }
+    }
+}
+
 fn main() {
     println!("Welcome to Liar's Dice!");
     println!("=========================================");
